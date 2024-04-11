@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUMA</title>
+    <script src="https://kit.fontawesome.com/361f862fc6.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+            font-size: 16px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .items{
+
+            border: 0px solid;
+            font-style: bold;
+            color: white;
+            margin: 10px;
+            padding: 10px;  
+        }
+        #Flex-parent{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 30;
+            font-weight: bold;          
+        }
+        .fa-search {
+            font-size: 18px;
+        }
+        #para {
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        #para1 {
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;         
+        }
+        #h3 {
+            font-size: 12px;
+            line-height: 0;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="continer" style="background-color: rgb(138, 115, 80);padding: 1px;color: white;">
+        <h3 style="text-align: center;">EXTRA 5% DISCOUNT FOR ALL ONLINE PAYMENTS
+        </h3>
+    </div>
+
+
+    <div id="Flex-parent" style="background-color: black; padding: 5px;">
+        <div>
+            <img src="https://assets.turbologo.com/blog/en/2019/11/19084917/puma-logo-cover-958x575.png" alt="puma"
+                height="50px" width:50px>
+        </div>
+
+        <div class="items" id="new">New</div>
+        <div class="items" id="women">Women</div>
+        <div class="items" id="men">Men</div>
+        <div class="items" id="kids">kids</div>
+        <div class="items" id="fenty">FENTY x PUMA</div>
+        <div class="items" id="motorsport">Motorsport</div>
+        <div class="items" id=collaboration>collaborations</div>
+        <div class="items" id="sport">Sport</div>
+        <div class="items" id="outlet">Oulet</div>
+
+        <div class="items" id="search">
+
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> SEARCH</button>
+        </div>
+
+        <div class="items"><i class="fa-regular fa-heart"></i></div>
+        <div class="items"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class="items"><i class="fa-regular fa-user"></i></div>
+
+    </div>
+
+    <div id="Banner" style="background-color: rgb(173, 25, 25); padding:10px;">
+        <div>
+            <!-- <p style="text-align: center;color: white; font-weight: 700; font-size: 18px;"> EXTRA 15% OFF*</p> -->
+
+            <p id="para">EXTRA 15% OFF*</p>
+            <h2 id="para1"> * ON CLOTHING ABOVE ₹1999 | * ON FOOTWEAR ABOVE ₹3999 </h2>
+            <h3 id="h3">Auto-applied at checkout | *Exclusion apply</h3>
+        </div>
+    </div>
+</body>
+</html>
+
