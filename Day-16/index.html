@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <script
+      src="https://kit.fontawesome.com/d4fa596027.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb HTML</title>
+    <style>
+      * {
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica Neue, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .d-none {
+        display: none;
+      }
+      #parentDiv {
+        width: 90%;
+        margin: auto;
+        border: 2px solid black;
+        height: 3000px;
+      }
+      #navbar {
+        width: 100%;
+        border: 2px solid red;
+        height: 80px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      #logo {
+        width: 15%;
+        /* border: 2px solid black; */
+        display: flex;
+        align-items: center;
+      }
+      #logo > img {
+        height: 45%;
+        width: 50%;
+      }
+      #navigations {
+        width: 25%;
+        border: 2px solid black;
+      }
+      #profile {
+        width: 20%;
+        border: 2px solid black;
+      }
+
+      #search,
+      #filter {
+        display: none;
+      }
+
+      * {
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica Neue, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #screen {
+        width: 90%;
+        margin: auto;
+        /* border: 2px solid black; */
+      }
+      #body {
+        width: 100%;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .productCard {
+        /* border: 2px solid blue; */
+        height: 400px;
+        width: 23%;
+        margin-bottom: 25px;
+      }
+      .cardBackGroundImg {
+        width: 100%;
+        /* border: 2px solid purple; */
+        height: 300px;
+        border-radius: 20px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-611964103002302908/original/ede7b8fc-9f6a-40ec-8f58-45b19d941a18.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .imgOver {
+        padding-top: 10px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .imgOver > p:nth-child(1) {
+        text-align: center;
+        background-color: white;
+        padding: 5px;
+        width: 46%;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .imgOver > i {
+        font-size: 24px;
+        color: white;
+      }
+      .cardText {
+        /* border: 2px solid purple; */
+      }
+      .cardText > p {
+        color: #7b7d81;
+        font-size: 14px;
+        padding: 2px 0px;
+      }
+
+      .cardText > p:nth-child(4) {
+        padding: 6px 0px;
+      }
+      .cardText > p > b {
+        color: black;
+      }
+      .cardTextTitleSection {
+        font-size: 14px;
+        display: flex;
+        font-weight: bold;
+        justify-content: space-between;
+      }
+      .cardTextTitleSection > p:nth-child(2) > i {
+        font-size: 12px;
+      }
+
+
+      /* 750, 950  */
+      @media screen and (max-width: 950px) {
+        #navigations {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        #logo,
+        #profile {
+          display: none;
+        }
+        #search,
+        #filter {
+          display: block;
+          border: 2px solid black;
+        }
+        #search {
+          width: 88%;
+          display: flex;
+          align-items: center;
+        }
+        #filter {
+          width: 10%;
+        }
+      }
+
+      @media screen and (min-width: 900px) and (max-width: 1100px) {
+        .productCard {
+          width: 32%;
+        }
+      }
+      @media screen and (min-width: 550px) and (max-width: 900px) {
+        .productCard {
+          width: 48%;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        .productCard {
+          margin: auto;
+          width: 88%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parentDiv">
+      <div id="navbar">
+        <div id="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
+            alt="Logo"
+          />
+        </div>
+        <div id="navigations">3</div>
+        <div id="profile">5</div>
+        <div id="search">
+          <div style="border: 1px solid grey; padding: 10px; width: 100%; border-radius: 25px;">
+            <i></i>
+            <div>
+                <h5>Anywhere</h5>
+                <p>Any week</p>
+            </div>
+          </div>
+        </div>
+        <div id="filter">
+            <div>
+                <i></i>
+            </div>
+        </div>
+      </div>
+      <div>Second Navbar</div>
+      <div>Filters</div>
+      <div id="screen">
+        <div id="body">
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg cardBackGroundImg1">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg cardBackGroundImg1">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg cardBackGroundImg1">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg cardBackGroundImg1">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg cardBackGroundImg1">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg cardBackGroundImg1">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="cardBackGroundImg">
+              <div class="imgOver">
+                <p>Guest Favourite</p>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="cardText">
+              <div class="cardTextTitleSection">
+                <p>Washi, Mumbai</p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0</span>
+                </p>
+              </div>
+              <p>4,343 KM away</p>
+              <p>14-19 Apr</p>
+              <p><b>₹5,000</b> night</p>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
